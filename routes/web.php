@@ -17,7 +17,63 @@ Route::get('/', function () {
     return view('layout.app');
 });
 
-Route::get('/home', function () {
+Route::get('/header', function () {
+    $navbar = [
+        [
+            "name"  =>  'characters',
+            "link"  =>  '#',
+            "active" =>  false,
+        ],
+        [
+            "name"  => 'comics',
+            "link"  =>  '#',
+            "active"  =>  true,
+        ],
+        [
+            "name"  =>  'movies',
+            "link"  =>  '#',
+            "active" =>  false,
+        ],
+        [
+            "name" =>  'tv',
+            "link" =>  '#',
+            "active" =>  false,
+        ],
+        [
+            "name" =>  'games',
+            "link"  => '#',
+            "active" => false,
+        ],
+        [
+            "name" => 'collectibles',
+            "link" =>  '#',
+            "active" =>  false,
+        ],
+        [
+            "name" => 'videos',
+            "link" =>  '#',
+            "active" => false,
+        ],
+        [
+            "name" => 'fans',
+            "link" => '#',
+            "active" =>  false,
+        ],
+        [
+            "name" => 'news',
+            "link" =>  '#',
+            "active"  =>  false,
+        ],
+        [
+            "name"  =>  'shop',
+            "link"  =>  '#',
+            "active"  =>  false,
+        ],
+    ];
+    return view('partials.header', compact('navbar'));
+});
+
+Route::get('/products', function () {
     $books = [
         [
             "title" => "Action Comics #1000: The Deluxe Edition",
@@ -128,31 +184,9 @@ Route::get('/home', function () {
             "type" => "graphic novel",
         ]
     ];
-    return view('pages.home', compact('books'));
+    return view('pages.products', compact('books'));
 });
 
 Route::get('/footer', function () {
-    $socialNav = [
-            [
-                "name"=> 'Facebook',
-                "image"=>'resources/img/footer-facebook.jpg'
-            ],
-            [
-                "name"=> 'Twitter',
-                "image"=>'resources/img/footer-twitter.jpg'
-            ],
-            [
-                "name"=> 'Youtube',
-                "image"=>'resources/img/footer-youtube.jpg'
-            ],
-            [
-                "name"=> 'Pinterest',
-                "image"=>'resources/img/footer-pinterest.jpg'
-            ],
-            [
-                "name" =>'Periscope',
-                "image"=>'resources/img/footer-periscope.jpg'
-            ],
-        ];
-    return view('partials.footer', compact('socialNav'));
+    return view('partials.footer');
 });

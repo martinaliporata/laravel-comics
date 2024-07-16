@@ -1,24 +1,21 @@
+@extends('layout.app')
+
 <footer>
     <section class="button">
         <button>
-            sign-up now!
+            Sign-up now!
         </button>
     </section>
     <section class="navbar">
         <h2>
-            follow us
+            Follow us
         </h2>
         <div>
-            @foreach ($socialNav as $social)
-            <article>
-                <p>
-                    {{$social['name']}}
-                </p>
-                <p>
-                    {{$social['image']}}
-                </p>
-            </article>
-        @endforeach
+            <img src="{{Vite::asset('resources/img/footer-facebook.png')}}" alt="">
+            <img src="{{Vite::asset('resources/img/footer-twitter.png')}}" alt="">
+            <img src="{{Vite::asset('resources/img/footer-youtube.png')}}" alt="">
+            <img src="{{Vite::asset('resources/img/footer-pinterest.png')}}" alt="">
+            <img src="{{Vite::asset('resources/img/footer-periscope.png')}}" alt="">
         </div>
     </section>
 </footer>

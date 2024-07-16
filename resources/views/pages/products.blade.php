@@ -19,7 +19,7 @@
     <h1>
         @foreach ($books as $book)
             <article>
-                {{-- <img src="{{Vite::asset('https://www.coverbrowser.com/image/action-comics/1-1.jpg')}}" alt=""> --}}
+                <img src="{{ $book['thumb'] }}" alt="">
                 <p>
                     {{$book['title']}}
                 </p>

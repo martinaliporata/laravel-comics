@@ -1,3 +1,5 @@
+@extends('layout.app')
+
 <header>
     <section class="logo">
         <img src="{{Vite::asset('resources/img/dc-logo.png')}}" alt="">
@@ -5,9 +7,13 @@
     <section class="navbar">
     <nav>
         <ul>
-        <li>
-            Navbar
-        </li>
+            <li>
+                @foreach ($navbar as $element)
+                    <p>
+                        {{$element['name']}}
+                    </p>
+                @endforeach
+            </li>
         </ul>
     </nav>
     </section>
