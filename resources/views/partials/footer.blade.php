@@ -9,7 +9,16 @@
             follow us
         </h2>
         <div>
-            Navbar social
+            @foreach ($socialNav as $social)
+            <article>
+                <p>
+                    {{$social['name']}}
+                </p>
+                <p>
+                    {{$social['image']}}
+                </p>
+            </article>
+        @endforeach
         </div>
     </section>
 </footer>

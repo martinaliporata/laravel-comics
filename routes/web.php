@@ -130,3 +130,29 @@ Route::get('/home', function () {
     ];
     return view('pages.home', compact('books'));
 });
+
+Route::get('/footer', function () {
+    $socialNav = [
+            [
+                "name"=> 'Facebook',
+                "image"=>'resources/img/footer-facebook.jpg'
+            ],
+            [
+                "name"=> 'Twitter',
+                "image"=>'resources/img/footer-twitter.jpg'
+            ],
+            [
+                "name"=> 'Youtube',
+                "image"=>'resources/img/footer-youtube.jpg'
+            ],
+            [
+                "name"=> 'Pinterest',
+                "image"=>'resources/img/footer-pinterest.jpg'
+            ],
+            [
+                "name" =>'Periscope',
+                "image"=>'resources/img/footer-periscope.jpg'
+            ],
+        ];
+    return view('partials.footer', compact('socialNav'));
+});
