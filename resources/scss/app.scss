@@ -1,9 +1,63 @@
-h1{
-    color: gold;
-}
-
 // div.dog{
 //     background-image: url('../img/happy-dogjpg.jpg');
 //     height: 400px;
 //     width: 100%;
 // }
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 1rem;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+ul {
+    list-style-type: none;
+}
+
+header{
+    img {
+        width: 10%;
+    }
+
+    header{
+    width: 100vw;
+    height: 15vh;
+    display: flex;
+    text-transform: uppercase;
+    }
+
+    .logo{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    }
+
+    .navbar{
+    width: 50%;
+    }
+
+    ul {
+    display: flex;
+    }
+
+    li {
+    padding-right: 1rem;
+    }
+}
+
+footer {
+    footer {
+        height: 15vh;
+        text-transform: uppercase;
+        background-color: #303030;
+    }
+
+    button,
+    h2 {
+        text-transform: uppercase;
+    }
+}
