@@ -1,20 +1,19 @@
-@extends('layout.app')
 
 <header>
     <section class="logo">
-        <img src="{{Vite::asset('resources/img/dc-logo.png')}}" alt="">
+        <img src="{{Vite::asset('resources/img/dc-logo.png')}}" class="main-logo" alt="">
     </section>
     <section class="navbar">
-    <nav>
-        <ul>
-            <li>
-                @foreach ($navbar as $element)
-                    <p>
-                        {{$element['name']}}
-                    </p>
-                @endforeach
-            </li>
-        </ul>
-    </nav>
+        <nav>
+            <ul>
+                <li class="{{Route::currentRouteName() === 'guest.products' ? 'active' : ''}}">
+                    <a href="{{route ('guest.products')}}">
+                        @foreach ($navbar as $element)
+                            {{$element['name']}}
+                        @endforeach
+                    </a>
+                </li>
+            </ul>
+        </nav>
     </section>
 </header>

@@ -16,10 +16,11 @@
 @extends('layout.app')
 
 @section('main-content')
-    <h1>
+    <section class="book-container">
+        {{-- per ogni elemento presente in $books itera con l'elemento che si chiamerà $book --}}
         @foreach ($books as $book)
-            <article>
-                <img src="{{ $book['thumb'] }}" alt="">
+            <article class="book-item">
+                <img src="{{ $book['thumb'] }}" class="main-logo" alt="">
                 <p>
                     {{$book['title']}}
                 </p>
@@ -40,5 +41,5 @@
                 </p>
             </article>
         @endforeach
-    </h1>
+    </section>
 @endsection
