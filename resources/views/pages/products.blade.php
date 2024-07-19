@@ -21,22 +21,22 @@
         @foreach ($books as $book)
             <article class="book-item">
                 <img src="{{ $book['thumb'] }}" class="main-logo" alt="">
-                <p>
+                <p class="uppercase">
                     {{$book['title']}}
                 </p>
                 <p>
-                    {{$book['description']}}
+                    {{ Str::limit($book['description'], 200) }}
                 </p>
-                <p>
+                <p class="italic">
                     {{$book['price']}}
                 </p>
                 <p>
                     {{$book['series']}}
                 </p>
-                <p>
+                <p class="italic">
                     {{$book['sale_date']}}
                 </p>
-                <p>
+                <p class="italic">
                     {{$book['type']}}
                 </p>
             </article>
